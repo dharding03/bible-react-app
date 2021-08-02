@@ -2,14 +2,14 @@ import React from "react";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import GenesisChapterSelect from "../Old Testament/Pentateuch/Genesis/GenesisChapterSelect";
 import ExodusChapterSelect from "../Old Testament/Pentateuch/Exodus/ExodusChapterSelect";
+import LeviticusChapterSelect from "../Old Testament/Pentateuch/Leviticus/LeviticusChapterSelect";
 
 function BookSelectionPage() {
     return (
         <Router>
             <>
-                <h1>Greetings</h1>
                 <nav>
-                    <table cellPadding={0} cellSpacing={0}>
+                    <table cellPadding={2} cellSpacing={2}>
                         <thead>
                         <tr>
                             <th>Old Testament</th>
@@ -18,7 +18,12 @@ function BookSelectionPage() {
                         <tr>
                             <td>
                                 <Link to="/genesis"><p>Genesis</p></Link>
+                            </td>
+                            <td>
                                 <Link to="/exodus"><p>Exodus</p></Link>
+                            </td>
+                            <td>
+                                <Link to="/leviticus"><p>Leviticus</p></Link>
                             </td>
                         </tr>
 
@@ -29,6 +34,9 @@ function BookSelectionPage() {
                 </Route>
                 <Route path="/exodus">
                     <ExodusChapterSelect />
+                </Route>
+                <Route path="/leviticus">
+                    <LeviticusChapterSelect />
                 </Route>
 
             </>
